@@ -2,7 +2,6 @@ from flask import render_template
 from app import app
 from .request import get_movies
 
-
 @app.route('/movie/<movie_id>')
 def movie(movie_id):
 
