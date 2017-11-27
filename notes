@@ -33,3 +33,35 @@ Variable blocks are defined with {{}}
  ProdConfig-subclass contains configurations that are used in production stages 
  DevConfig-subclass contains configurations that are used in development stages
  
+
+instance_relative_config which allow us to connect to the instance/ folder when the app instance is created.
+
+The app.config.from_pyfile('config.py') connects to the config.py file and all its contents are appended to the app.config.
+
+Create a new folder inside the app and name it models inside it create a new file movie.py. We also create an empty __init__.py inside the folder.
+
+This will make the folder a python package that can be imported to other packages outside it
+
+MOVIE PARAMETERS
+1. Title - The name of the movie
+2. Overview - A short description on the movie
+3. image- The poster image for the movie
+4. vote_average - Average rating of the movie
+5. vote_count - How many people have rated the movie
+6. id - The movie id
+
+We then create a get_movies() function that takes in a movie category as an argument.
+
+We use the .format() method on the base_url and pass in the movie category and the api_key. this will replace the {} curly brace placeholders in the base_url with the category and api_key respectively.
+
+This creates get_movies_url as the final URL for our API request.
+
+We then use with as our context manager to send a request using the urllib.request.urlopen() function that take in the get_movies_url as an argument and sends a request as url
+
+We use the read() function to read the response and store it in a get_movies_data variable.
+
+We then convert the JSON response to a Python dictionary using json.loads function and pass in the get_movies_data variable.
+
+We then check if the response contains any results. If it does we call a process_results() function that take in the list of dictionary objects and returns a list of movie objects .
+
+We then return movie_results which is a list of movie objects.
