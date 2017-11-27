@@ -27,4 +27,9 @@ inja 2 as a template language.(simple format that is used to automate the creati
 
 render_template()- takes in the name of a template file as the first argument.
 
-Variable blocks are defined with {{}} 
+Variable blocks are defined with {{}}
+
+ Config-contains configurations that are used in both production and development stages.
+ ProdConfig-subclass contains configurations that are used in production stages 
+ DevConfig-subclass contains configurations that are used in development stages
+ 
