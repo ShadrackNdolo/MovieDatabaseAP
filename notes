@@ -86,3 +86,5 @@ We then return movie_results which is a list of movie objects.
     |-.gitignore
     |-manage.py
     |-start.sh
+
+    A Procfile is a mechanism for declaring what commands are run by the Heroku environment
