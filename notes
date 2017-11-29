@@ -65,3 +65,24 @@ We then convert the JSON response to a Python dictionary using json.loads functi
 We then check if the response contains any results. If it does we call a process_results() function that take in the list of dictionary objects and returns a list of movie objects .
 
 We then return movie_results which is a list of movie objects.
+
+|-Watchlist
+    |-app/
+        |-main/
+            |-__init__.py
+            |-errors.py
+            |-forms.py
+            |-views.py
+        |-static/
+        |-templates/
+        |-__init__.py
+        |-models.py
+        |-requests.py
+    |-tests/
+        |-test_movie.py
+        |-test_review.py
+    |-virtual/
+    |-config.py
+    |-.gitignore
+    |-manage.py
+    |-start.sh
